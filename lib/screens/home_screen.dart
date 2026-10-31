@@ -225,9 +225,12 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Icon(icon, size: 18),
             const SizedBox(width: 10),
-            Text(title,
-                style:
-                    const TextStyle(fontSize: 12, fontWeight: FontWeight.w500)),
+            Expanded(
+              child: Text(title,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                      fontSize: 12, fontWeight: FontWeight.w500)),
+            ),
           ],
         ),
       ),
